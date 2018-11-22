@@ -1,7 +1,7 @@
 FROM openjdk:8-jre-alpine
 ENV VERTICLE_HOME /usr/verticles
 EXPOSE 9000
-COPY target/clientes-1.0.0-SNAPSHOT-fat.jar src/config/config.json build_and_run.sh $VERTICLE_HOME/
+COPY target/* src/config/config.json build_and_run.sh $VERTICLE_HOME/
 WORKDIR $VERTICLE_HOME
 RUN apk update && apk add bash
 RUN chmod +x build_and_run.sh
