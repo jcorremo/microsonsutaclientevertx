@@ -3,7 +3,7 @@ kind: "ImageStream"
 metadata:
   name: "consulta-vertx-service"
 spec:
-  dockerImageRepository: "andres/consulta-vertx-service:latest"
+  dockerImageRepository: "andres/consulta-vertx-service"
   tags:
   - annotations: null
     generation: 1
