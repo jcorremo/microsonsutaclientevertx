@@ -5,8 +5,4 @@ metadata:
 spec:
   dockerImageRepository: "andres/consulta-vertx-service"
   tags:
-  - annotations: null
-    generation: 1
-    importPolicy:
-      insecure: true
-    name: latest
+   - name: "nueva"
