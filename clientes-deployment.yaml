@@ -1,15 +1,15 @@
 kind: "DeploymentConfig"
 apiVersion: "v1"
 metadata:
-  name: "account-service"
+  name: "consulta-service"
 spec:
   template:
     metadata:
       labels:
-        name: "account-service"
+        name: "consulta-service"
     spec:
       containers: # (1)
-        - name: "account-vertx-service"
+        - name: "consulta-vertx-service"
           image: "andres/consulta-vertx-service:latest"
           ports:
             - containerPort: 9000
@@ -19,12 +19,12 @@ spec:
     - type: "ConfigChange"
     - type: "ImageChange"
       imageChangeParams:
-        automatic: true
+        automatic: false
         containerNames:
-          - "account-vertx-service"
+          - "consulta-vertx-service"
         from:
           kind: "ImageStreamTag"
-          name: "account-vertx-service:latest"
+          name: "consulta-vertx-service:latest"
   strategy: # (4)
     type: "Rolling"
   paused: false
