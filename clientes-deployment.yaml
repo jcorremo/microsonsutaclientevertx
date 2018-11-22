@@ -6,7 +6,7 @@ spec:
   template:
     metadata:
       labels:
-        name: "vertx"
+        name: "nn"
     spec:
       containers: 
         - name: "consulta-vertx-service"
@@ -15,8 +15,6 @@ spec:
             - containerPort: 9000
               protocol: "TCP"
   replicas: 1 
-  selector:
-    name: "vertx"
   triggers: 
     - type: "ConfigChange"
     - type: "ImageChange"
