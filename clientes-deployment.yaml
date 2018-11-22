@@ -1,18 +1,18 @@
 kind: "DeploymentConfig"
 apiVersion: "v1"
 metadata:
-  name: "vertx-service"
+  name: "customer-service"
 spec:
   template:
     metadata:
       labels:
-        name: "vertx-service"
+        name: "customer-service"
     spec:
       containers: 
-        - name: "consulta-vertx-service"
+        - name: "customer-vertx-service"
           image: "andres/consulta-vertx-service:latest"
           ports:
-            - containerPort: 9000
+            - containerPort: 8095
               protocol: "TCP"
   replicas: 1 
   triggers: 
@@ -21,7 +21,7 @@ spec:
       imageChangeParams:
         automatic: true
         containerNames:
-          - "consulta-vertx-service"
+          - "customer-vertx-service"
         from:
           kind: "ImageStreamTag"
           name: "consulta-vertx-service:latest"
