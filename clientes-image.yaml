@@ -1,7 +1,7 @@
 apiVersion: "v1"
 kind: "ImageStream"
 metadata:
-  name: "consulta-vertx-service:latest"
+  name: "consulta-vertx-service"
 spec:
   dockerImageRepository: "andres/consulta-vertx-service:latest"
   tags:
