@@ -10,7 +10,7 @@ spec:
     spec:
       containers: 
         - name: "consulta-vertx-service"
-          image: "andres/consulta-vertx-service"
+          image: "andres/consulta-vertx-service:latest"
           ports:
             - containerPort: 9000
               protocol: "TCP"
@@ -24,7 +24,7 @@ spec:
           - "consulta-vertx-service"
         from:
           kind: "ImageStreamTag"
-          name: "consulta-vertx-service"
+          name: "consulta-vertx-service:latest"
   strategy: 
     type: "Rolling"
   paused: false
