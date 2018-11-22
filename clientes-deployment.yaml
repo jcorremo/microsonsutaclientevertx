@@ -1,0 +1,31 @@
+kind: "DeploymentConfig"
+apiVersion: "v1"
+metadata:
+  name: "cliente-service"
+spec:
+  template:
+    metadata:
+      labels:
+        name: "cliente-service"
+    spec:
+      containers: 
+        - name: "cliente-vertx-service"
+          image: "consulta-vertx-service:latest"
+          ports:
+            - containerPort: 1234
+              protocol: "TCP"
+  replicas: 1 
+  triggers: 
+    - type: "ConfigChange"
+    - type: "ImageChange"
+      imageChangeParams:
+        automatic: true
+        containerNames:
+          - "cliente-vertx-service"
+        from:
+          kind: "ImageStreamTag"
+          name: "onsulta-vertx-service:latest"
+  strategy: 
+    type: "Rolling"
+  paused: false
+  revisionHistoryLimit: 2
