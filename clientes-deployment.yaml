@@ -8,24 +8,25 @@ spec:
       labels:
         name: "consulta-service"
     spec:
-      containers: # (1)
+      containers: 
         - name: "consulta-vertx-service"
           image: "andres/consulta-vertx-service:latest"
           ports:
             - containerPort: 9000
               protocol: "TCP"
-  replicas: 1 # (2)
-  triggers: # (3)
+  replicas: 1 
+  triggers: 
     - type: "ConfigChange"
     - type: "ImageChange"
       imageChangeParams:
-        automatic: false
+        automatic: true
         containerNames:
           - "consulta-vertx-service"
         from:
           kind: "ImageStreamTag"
           name: "consulta-vertx-service:latest"
-  strategy: # (4)
+  strategy: 
     type: "Rolling"
   paused: false
   revisionHistoryLimit: 2
+  minReadySeconds: 0
