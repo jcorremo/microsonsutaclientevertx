@@ -24,7 +24,7 @@ spec:
           - "cliente-vertx-service"
         from:
           kind: "ImageStreamTag"
-          name: "onsulta-vertx-service:latest"
+          name: "consulta-vertx-service:latest"
   strategy: 
     type: "Rolling"
   paused: false
