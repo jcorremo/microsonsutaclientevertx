@@ -4,5 +4,3 @@ metadata:
   name: "consulta-vertx-service"
 spec:
   dockerImageRepository: "andres/consulta-vertx-service"
-  tags:
-   - name: "nueva"
