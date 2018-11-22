@@ -1,0 +1,3 @@
+io\vertx\clientes\ClienteVerticle.class
+io\vertx\clientes\httpserver\ClienteController.class
+io\vertx\clientes\model\Customer.class
