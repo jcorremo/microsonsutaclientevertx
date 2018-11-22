@@ -1,6 +1,6 @@
 {
 	"vertx.host": "0.0.0.0",
-	"vertx.port": 1234,
+	"vertx.port": 9000,
 	"mongo": {
 		"connection_string": "mongodb://userCustomerDB:Terpel2018!@mongoclientes.apps.openshift-master.innovacioneveris.tech:27017/customerdb"
 	}

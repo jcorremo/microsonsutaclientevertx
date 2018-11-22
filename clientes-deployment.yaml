@@ -12,7 +12,7 @@ spec:
         - name: "cliente-vertx-service"
           image: "consulta-vertx-service:latest"
           ports:
-            - containerPort: 1234
+            - containerPort: 9000
               protocol: "TCP"
   replicas: 1 
   triggers: 
