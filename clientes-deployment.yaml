@@ -1,16 +1,16 @@
 kind: "DeploymentConfig"
 apiVersion: "v1"
 metadata:
-  name: "consulta-vertx-service"
+  name: "consulta-service"
 spec:
   template:
     metadata:
       labels:
-        name: "consulta-vertx-service"
+        name: "consulta-service"
     spec:
       containers: 
         - name: "consulta-vertx-service"
-          image: "consulta-vertx-service:latest"
+          image: "andres/consulta-vertx-service:latest"
           ports:
             - containerPort: 9000
               protocol: "TCP"
