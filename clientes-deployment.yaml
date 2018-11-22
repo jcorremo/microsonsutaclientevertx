@@ -6,7 +6,7 @@ spec:
   template:
     metadata:
       labels:
-        name: "customer-service"
+        name: "vertex"
     spec:
       containers: 
         - name: "customer-vertx-service"
@@ -15,7 +15,7 @@ spec:
             - containerPort: 8095
               protocol: "TCP"
   replicas: 1 
-  selector: "customer-service"
+  selector: "vertex"
   triggers: 
     - type: "ConfigChange"
     - type: "ImageChange"
