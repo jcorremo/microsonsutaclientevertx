@@ -15,7 +15,7 @@ spec:
             - containerPort: 8095
               protocol: "TCP"
   replicas: 1 
-  selector: customer-service
+  selector: "customer-service"
   triggers: 
     - type: "ConfigChange"
     - type: "ImageChange"
