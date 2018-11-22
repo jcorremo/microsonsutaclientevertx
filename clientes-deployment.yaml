@@ -1,20 +1,22 @@
 kind: "DeploymentConfig"
 apiVersion: "v1"
 metadata:
-  name: "consulta-service"
+  name: "vertx"
 spec:
   template:
     metadata:
       labels:
-        name: "consulta-service"
+        name: "vertx"
     spec:
       containers: 
         - name: "consulta-vertx-service"
-          image: "andres/consulta-vertx-service:latest"
+          image: "andres/consulta-vertx-service"
           ports:
             - containerPort: 9000
               protocol: "TCP"
   replicas: 1 
+  selector:
+    name: "vertx"
   triggers: 
     - type: "ConfigChange"
     - type: "ImageChange"
