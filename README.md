@@ -1,0 +1,2 @@
+# microsonsutaclientevertx
+consulta vertx
