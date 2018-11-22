@@ -3,4 +3,4 @@ kind: "ImageStream"
 metadata:
   name: "cliente-vertx-service"
 spec:
-  dockerImageRepository: "consulta-vertx-service:latest"
+  dockerImageRepository: "consulta-vertx-service"
